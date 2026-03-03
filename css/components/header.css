@@ -1,45 +1,46 @@
-.header{
+/* Component CSS for header */
+.header {
+    background-color: #fff;
     position: fixed;
     top: 60px;
-    left: 50%;
+    left : 50%;
     transform: translateX(-50%);
-    width: calc(100% - 210px);
+    width: 1260px;
     border-radius: 15px;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.255rem 1.25rem;
-    background-color: #ffffff;
 }
 
 .logo img{
     height: 48px;
-    width: 150px;
 }
 
-.nav-center ul{
-display: flex;
-gap: 40px;
+.nav-center ul {
+    display: flex;
+    gap: 2.5rem;
+
 }
 
-.nav-center a,
-.nav-right a{
+.nav-center a, 
+.nav-right a {
     font-size: 1.25rem;
-    color: #333333;
+    color: #333;
 }
 
 .nav-center a:hover,
-.nav-right a:hover{
-    color:blueviolet;
+.nav-right a:hover {
+    color: blueviolet;
 }
 
-.nav-right ul{
+.nav-right ul {
     display: flex;
     gap: 2.5rem;
 }
 
-.nav-right img{
+.nav-right img {
     height: 24px;
 }
 
@@ -47,14 +48,16 @@ gap: 40px;
     opacity: 0.7;
 }
 
-.nav-container{
+.nav-container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;    
     width: 100%;
-    align-items: center;
+    justify-content: space-between;
+    margin-left:10rem;
 }
+
 .menu-toggle{
-    display: none;
+    display:none;
 }
 
 .menu-icon{
@@ -69,58 +72,62 @@ gap: 40px;
     transition: opacity 0.3s ease;
 }
 
-.menu-icon:hover img{
+.menu-icon:hover{
     opacity: 0.7;
 }
 
-@media(max-width:1280px){
+@media (max-width: 1280px){
     .header{
         width: calc(100% - 40px);
     }
-
     .menu-icon{
+        display:block;
         width: 30px;
-        height: 30px;   
-        display: block;
+        height: 30px;
         cursor: pointer;
         z-index: 1001;
     }
 
     .nav-container{
         position: fixed;
-        top:0;
+        top: 0;
         right: -100%;
         width: 200px;
         flex-direction: column;
         padding: 80px 20px 20px;
-        background-color: #ffffff;
+        background-color: #fff;
         gap: 2rem;
         transition: right 0.3s ease;
         align-items: flex-start;
+        ;
     }
 
+    .nav-center, .nav-right{
+        width: 100%;
+        text-align: center;
+    }
+
+    
     .nav-center ul, .nav-right ul{
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
     }
 
-    .nav-center ul li, .nav-right ul li{
+    .nav-center li, .nav-right li{
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
     }
 
-
     .nav-center a, .nav-right a{
         width: 100%;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid #eee;
         padding: 0.3rem 0;
         font-size: 1rem;
-        display: block;
     }
 
-    .menu-toggle:checked ~ .nav-container {
-    right: 0;
-}
+    .menu-toggle:checked ~ .nav-container{
+        right: 0;
+    }
 }

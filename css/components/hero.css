@@ -1,9 +1,9 @@
-.hero-section{
-    background: url(../../images/banners/hero.jpg) no-repeat center;
-
+/* Component CSS for hero section */
+.hero-section {
+    background: url('../../images/banners/hero.jpg') no-repeat center;
+    background-size: cover;
     height: 500px;
     position: relative;
-    background-size:cover;
     border-radius: 20px;
 }
 
@@ -14,17 +14,13 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 6rem;
+
 }
 
-.hero-content{
-    color: #ffffff;
-    max-width: 360px;
-    text-align: center;
-}
-
-.hero-buttons{
-    display: flex;
-    gap: 16px;
+.hero-content {
+color: #fff;
+max-width: 360px;
+text-align: center;
 }
 
 .hero-content .hero-title{
@@ -37,41 +33,36 @@
 
 .hero-content .hero-subtitle{
     font-size: 1.25rem;
-    font-weight: 400;
+     font-weight: 400;
 }
 
-@media (max-width: 768px) {
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+
+@media (max-width: 768px){
     .hero-section{
         height: 660px;
-        background-image: url(../../images/banners/hero-mobile.png);
+        background-image: url(../../images/banners/hero-mobile.jpg);
+    }
+
+    .hero-overlay{
+        padding: 0;
+    }
+
+    .hero-content .hero-title{
+        font-size: 1.5rem;
+    }
+        .hero-content .hero-subtitle{
+        font-size: 1.25rem;
+    }
+    .hero-content{
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .btn{
+        font-size: 1.2rem;
     }
 }
-
-.hero-overlay{
-    padding: 0;
-}
-
-.hero-content .hero-title{
-    font-size: 1.5rem;
-}
-
-.hero-content .hero-subtitle{
-    font-size: 1.25rem;
-}
-
-.hero-content{
-    max-width: 330px;
-    margin: 0 auto;
-}
-
-.btn{
-    font-size:1.2rem;
-}
-
-@media (max-width: 500px) {
-    .categories-section{
-        width: 100%;
-    }
-}
-
-
